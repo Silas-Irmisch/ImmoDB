@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Immobiliendatenbank!{% endblock %}
+
+{% block body %}
+
+<div class="content">
+	<h1 class="banner">ImmoDB</h1>
+
+	<h2>Durchsuche die Datenbank!</h2>
+	<form>
+		<label for="fquery">Suche</label>
+		<input type="search" id="fquery" name="fquery">
+	</form>
+
+	{% for i in immobilien %}
+		<hr> 
+		<b>{{ i.titel }}</b><br>
+		{{ i.beschreibung }}<br>
+		{{ i.plz }}&nbsp;{{ i.ort }}
+	{% endfor %}
+</div>
+
+{% endblock %}
