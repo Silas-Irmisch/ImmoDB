@@ -31,8 +31,6 @@ class AdminController extends AbstractController
 			$eM->flush();
 
 			echo 'Immobilie gesichert mit id '.$immobilie->getId();
-
-			// return $this->redirectToRoute('task_success');
         }
 
 		return $this->render('immodb/admin.html.twig', [

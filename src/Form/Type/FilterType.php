@@ -12,7 +12,14 @@ class FilterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('filter', SearchType::class, array('required' => false))
+            ->add('filter', SearchType::class, [
+				'label' => 'Filter',
+				'attr' => ['placeholder' => 'Filter'],
+				'row_attr' => [
+					'class' => 'form-floating m-1 mx-5'
+				],
+				'required' => false
+			])
         ;
     }
 }
