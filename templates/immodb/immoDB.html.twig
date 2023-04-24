@@ -8,10 +8,7 @@
 	<h1 class="banner">ImmoDB</h1>
 
 	<h2>Durchsuche die Datenbank!</h2>
-	<form>
-		<label for="fquery">Suche</label>
-		<input type="search" id="fquery" name="fquery">
-	</form>
+	{{ form(form) }}
 
 	{% for i in immobilien %}
 		<hr> 
